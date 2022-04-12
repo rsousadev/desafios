@@ -29,3 +29,26 @@ Construir um robô que nos envie essa lista via Telegram sempre que receber o co
 ### Dicas
  - Use https://old.reddit.com/
  - Qualquer método para coletar os dados é válido. Caso não saiba por onde começar, procure por JSoup (Java), SeleniumHQ (Java), PhantomJS (Javascript) e Beautiful Soup (Python).
+
+## Para executar o bot do telegram
+
+ - É necessário ter o docker e docker-compose instalado na máquina.
+ - Será preciso configurar um arquivo chamado env.sh dentro da raiz do projeto com o valor:
+ - ```bash 
+    echo "export TELEGRAM_TOKEN=SEU_TOKEN_TELEGRAM" >> env.sh
+    ```
+ - Após o arquivo env.sh já existir executar o comando.
+ - ```bash 
+    source env.sh
+    make run
+    ```
+
+## Para executar o bot local via terminal
+
+ - Versão do python utilizada 3.10.3
+ - Será preciso configurar um arquivo chamado env.sh dentro da raiz do projeto com o valor:
+ - ```bash 
+    echo "export TELEGRAM_TOKEN=SEU_TOKEN_TELEGRAM" >> env.sh
+    $ pip install -r requirements.txt
+    $ python main.py
+    ```

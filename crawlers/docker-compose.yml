@@ -1,0 +1,27 @@
+version: "3.10"
+
+x-common_env: &common_env
+  PYTHONUNBUFFERED: 1
+  TELEGRAM_TOKEN: ${TELEGRAM_TOKEN}
+
+services:
+  idwall:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - idwall-worker
+    volumes:
+      - type: bind
+        source: ./
+        target: /opt/idwall/
+    environment:
+      <<: *common_env
+
+
+volumes:
+  idwall-data:
+    name: "idwall-data"
+
+networks:
+  idwall-worker:

@@ -33,3 +33,10 @@ O exemplo de output está [neste arquivo](https://github.com/idwall/desafios/blo
 ### Extras
 
 - Parametrização da quantidade de caracteres por linha.
+
+### Para executar
+
+- Versão do python utilizada 3.10.3
+- ```bash 
+    $ python main.py
+  ```
